@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://fl0user:S9zCVBwgT1pE@ep-tiny-violet-a5sfiymx.us-east-2.aws.neon.fl0.io:5432/ProductionDatabase?sslmode=require')
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ import environ
 
 #Initialise our environment variables
 
-env =environ.Env()
+venv =environ.Env()
 
 environ.Env.read_env()
 
@@ -33,7 +33,7 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dseo=-4d14+j=9ei*7u3$0*!g8pmq*)$5qsh&#z^^&45t^37ho'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
