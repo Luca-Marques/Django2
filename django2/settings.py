@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': dj_database_url.parse('postgres://fl0user:S9zCVBwgT1pE@ep-tiny-violet-a5sfiymx.us-east-2.aws.neon.fl0.io:5432/ProductionDatabase?sslmode=require')
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -80,21 +80,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django2.wsgi.application'
 
+"""
+ Database
+ https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'django2',
-#        'USER': 'geek',
-#        'PASSWORD': 'university',
-#        'HOST': 'localhost',
-#        'PORT': '3306',
-#    }
-#}
-
+ DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django2',
+        'USER': 'geek',
+        'PASSWORD': 'university',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
