@@ -35,10 +35,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dseo=-4d14+j=9ei*7u3$0*!g8pmq*)$5qsh&#z^^&45t^37ho'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+#CSRF_TRUSTED_ORIGINS = ['https://']
 
 # Application definition
 
